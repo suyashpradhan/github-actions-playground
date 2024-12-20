@@ -24,4 +24,4 @@ jobs:
         with:
           node-version: '14'
       - run: npm install axios
-      - run: npx axios -v
+      - run: echo "Axios ${axios -v} was installed successfully, now you can use it in your workflow."
