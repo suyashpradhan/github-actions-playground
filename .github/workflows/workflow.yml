@@ -11,6 +11,7 @@ jobs:
           event."
       - run: echo "🎉 The job was triggered by a ${{ github.actor }} user."
   Job-2:
+    needs: [Job-1]
     runs-on: ubuntu-latest
     steps:
       - run:
@@ -18,6 +19,7 @@ jobs:
           event."
   Job-3:
     runs-on: ubuntu-latest
+    needs: [Job-2]
     steps:
       - name: Install Node.js
         uses: actions/setup-node@v2
@@ -27,4 +29,5 @@ jobs:
         run: npm install axios
       - name: "Checking Axios version"
         run: |
-          echo "Axios version: $(npx axios -v)"
+          AXIOS_VERSION=$(node -p "require('axios/package.json').version")
+          echo "Axios version: $AXIOS_VERSION"
