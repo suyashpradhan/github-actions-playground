@@ -1,4 +1,5 @@
 name: GitHub Actions
+run-name: Basic CI/CD
 on: [push]
 
 jobs:
