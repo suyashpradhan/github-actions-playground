@@ -1,5 +1,5 @@
 name: GitHub Actions
-run-name: Basic CI/CD
+run-name: Basic CI/CD ran by {{ github.actor }}
 on:
   - push
 jobs:
