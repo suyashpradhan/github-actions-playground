@@ -27,5 +27,4 @@ jobs:
         run: npm install axios
       - name: "Checking Axios version"
         run: |
-          AXIOS_VERSION=$(node -p "require('axios/package.json').version")
-          echo "Axios version: $AXIOS_VERSION"
+          echo "Axios version: $(npx axios -v)"
