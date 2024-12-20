@@ -19,5 +19,9 @@ jobs:
   Job-3:
     runs-on: ubuntu-latest
     steps:
-      - run: npx install axios
-      - run: echo "🎉 Axios Version is $(axios --version)."
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm install axios
+      - run: npx axios -v
