@@ -19,6 +19,11 @@ jobs:
           event."
   Job-3:
     runs-on: ubuntu-latest
+    steps:
+      - name: "Installing Datadog CLI"
+        run: npm install -g @datadog/datadog-ci
+  Job-4:
+    runs-on: ubuntu-latest
     needs: [Job-2]
     steps:
       - name: Install Node.js
