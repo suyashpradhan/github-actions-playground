@@ -26,17 +26,17 @@ jobs:
     - name: Install DataDog CI
       shell: bash
       run: npm install -g @datadog/datadog-ci
-#  Job-4:
-#    runs-on: ubuntu-latest
-#    needs: [Job-2]
-#    steps:
-#      - name: Install Node.js
-#        uses: actions/setup-node@v2
-#        with:
-#          node-version: '14'
-#      - name: "Installing Axios"
-#        run: npm install axios
-#      - name: "Checking Axios version"
-#        run: |
-#          AXIOS_VERSION=$(node -p "require('axios/package.json').version")
-#          echo "Axios version: $AXIOS_VERSION"
+  Job-4:
+    runs-on: ubuntu-latest
+    needs: [Job-2]
+    steps:
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: "Installing Axios"
+        run: npm install axios
+      - name: "Checking Axios version"
+        run: |
+          AXIOS_VERSION=$(node -p "require('axios/package.json').version")
+          echo "Axios version: $AXIOS_VERSION"
